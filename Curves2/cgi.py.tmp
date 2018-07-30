@@ -1,0 +1,23 @@
+import sys
+
+from CGI import CGI
+
+class Curves2_CGI(CGI):
+    #Tempp! Force CGI
+    def CGI_Is000000000(self):
+        return True
+
+    def Curves2_Args_CGI(self):
+        ckeys=self.Curve.Curve_Parameter_Keys()
+
+        keys=[]
+        if ( len(sys.argv)>1 ):
+            for i in range(2,len(sys.argv)):
+                if (i-2<len(ckeys)):
+                    keys.append(sys.argv[i])
+
+        for i in range( len(keys) ):
+            setattr(self.Curve,ckeys[i],keys[i])
+
+        return keys
+
