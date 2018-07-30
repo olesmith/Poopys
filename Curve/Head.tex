@@ -1,0 +1,82 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{enumerate}
+\usepackage{float}
+%\usepackage{cancel}
+\usepackage{amssymb,amsmath}
+\usepackage{amsthm}
+\usepackage{authblk}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{changepage}
+\usepackage[pdftex]{graphics}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[usenames]{xcolor}
+
+\usepackage{booktabs}
+
+
+%Args: {includegraphics}{title}{label}
+\newcommand{\Figs}[2]
+{
+   \begin{center}
+      #1
+   \end{center}
+   \label{#2}
+}
+
+
+
+
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Definition}{Definition}
+\newtheorem{Classification}{Classification}
+\newtheorem{Corollary}{Corollary}
+
+\title{Calculating Planar Curve Evolutes}
+\setlength{\parindent}{0cm}
+
+\author{Ole Peter Smith}
+\affil{Instituto de Matem\'atica e Estat\'istica, Universidade Federal de Goi\'as}
+
+\newcommand{\Matrix}[1]{\underline{\underline{{\mathbf{#1}}}}}
+\newcommand{\Vector}[1]{\hspace{0.05cm} \underline{\mathbf{#1}}}
+
+
+\newcommand{\Tr}[1]{\mathop{\mathrm{Tr}} #1 }
+\newcommand{\ger}[0]{\mathop{\mathrm{ger}}}
+\newcommand{\gel}[0]{\mathop{\mathrm{gel}}}
+\newcommand{\sgn}[0]{\mathop{\mathrm{sgn}}}
+\newcommand{\vect}[2]{ \left( \begin{array}{c} #1\\#2   \end{array}\right)}
+
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\Arccos}{Arccos}
+\DeclareMathOperator{\Artanh}{Artanh}
+
+%Command: Table{table}{caption}{width}{label}
+\newcommand{\Table}[4]{
+\begin{center}\begin{table}[H]
+      \begin{center}
+      \begin{minipage}{#3}\begin{center}
+         #1
+      \end{center}\end{minipage}
+      \end{center}
+      \caption{#2}
+      \label{#4}
+\end{table}\end{center}
+}
+
+
+\newcounter{example}
+\setcounter{example}{1}
+
+
+\newcounter{theexample}
+\setcounter{theexample}{0}
+
+
+
+\begin{document}
